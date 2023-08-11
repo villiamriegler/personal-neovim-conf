@@ -20,6 +20,12 @@ keymap("n", "<Leader>w", "<C-w>", { silent = true })
 keymap("v", ">", ">gv", { silent = true, noremap = true })
 keymap("v", "<", "<gv", { silent = true, noremap = true })
 
+-- Moving text
+keymap("n", "<C-k>", ":m -2<Cr>", { silent = true })
+keymap("n", "<C-j>", ":m +1<Cr>", { silent = true })
+keymap("v", "<C-k>", ":m '<-2<Cr>gv=gv", { silent = true })
+keymap("v", "<C-j>", ":m '>+1<Cr>gv=gv", { silent = true })
+
 -- ********************
 -- Shortcut keybindings
 -- ********************

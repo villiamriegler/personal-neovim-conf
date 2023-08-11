@@ -90,3 +90,11 @@ cmp.setup.cmdline(':', {
 			{ name = 'cmdline' }
 	})
 })
+
+-- brackets ater function insert
+local autopairs_cmp = require'nvim-autopairs.completion.cmp'
+cmp.event:on (
+	'confirm_done',
+	autopairs_cmp.on_confirm_done()
+)
+
