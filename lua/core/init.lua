@@ -1,0 +1,7 @@
+require 'core.opts'
+require 'core.plugins'
+require 'core.keymaps'
+require 'core.treesitter'
+require 'core.lualine'
+require 'core.telescope'
+require 'core.lsp'
