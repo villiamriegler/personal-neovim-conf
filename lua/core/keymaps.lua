@@ -13,6 +13,8 @@ keymap("v", "<Leader>h", "0", { silent = true })
 
 -- Cycle splits
 keymap("n", "<tab>", "<C-w><C-w>", { silent = true })
+-- Remap <c-w> to more comfortable
+keymap("n", "<Leader>w", "<C-w>", { silent = true })
 
 -- Keep selection when indenting
 keymap("v", ">", ">gv", { silent = true, noremap = true })
@@ -33,7 +35,7 @@ keymap("n", "<A-h>", ":split ", {})
 
 -- Buffers
 keymap("n", "<Leader>n", ":bnext<Cr>", { silent = true })
-keymap("n", "<Leader>p", ":bnext<Cr>", { silent = true })
+keymap("n", "<Leader>p", ":bprevious<Cr>", { silent = true })
 
 -- ********************
 -- Toggle options
