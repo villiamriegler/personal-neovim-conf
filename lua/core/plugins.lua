@@ -56,4 +56,9 @@ return require('packer').startup(function(use)
 	-- Float term
 	use 'voldikss/vim-floaterm'
 
+	-- Which key i ain't ashamed
+	use {
+		"folke/which-key.nvim",
+		config = function() require("which-key").setup {} end
+	}
 end)
