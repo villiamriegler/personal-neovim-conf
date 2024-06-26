@@ -9,6 +9,18 @@ vim.cmd([[
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
+	use {
+		'lervag/vimtex',
+		config = function ()
+			vim.g.vimtex_view_method = "zathura"
+			vim.g.tex_flavor = "latex"
+			vim.g.vimtex_compiler_engine='lualatex'
+			vim.conceallevel=1
+		end
+
+	}
+
+
 	-- Auto pairs
 	use {
 		"windwp/nvim-autopairs",
@@ -66,5 +78,4 @@ return require('packer').startup(function(use)
 		"iamcco/markdown-preview.nvim",
 		run = function() vim.fn["mkdp#util#install"]() end,
 	})
-
 end)
