@@ -30,5 +30,8 @@ opt.splitbelow = true
 -- Saving
 opt.confirm = true
 
+opt.conceallevel=1
+
 -- Color Theme
 vim.cmd.colorscheme 'nordic'
+

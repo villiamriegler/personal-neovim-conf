@@ -79,6 +79,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', '<Leader>wa', vim.lsp.buf.add_workspace_folder, { buffer = ev.buf, desc = "Add directory" })
 		vim.keymap.set('n', '<Leader>wr', vim.lsp.buf.remove_workspace_folder,
 			{ buffer = ev.buf, desc = "Remove directory" })
+
 		vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, { buffer = ev.buf, desc = "Rename file" })
 		-- Suggested actions by lsp
 		vim.keymap.set({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action, { buffer = ev.buf, desc = "Code actions" })

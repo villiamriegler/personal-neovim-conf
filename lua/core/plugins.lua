@@ -40,6 +40,41 @@ return require('packer').startup(function(use)
 		end,
 	}
 
+
+	use({
+	  "epwalsh/obsidian.nvim",
+	  tag = "*",  -- recommended, use latest release instead of latest commit
+	  requires = {
+		-- Required.
+		"nvim-lua/plenary.nvim",
+
+		-- see below for full list of optional dependencies 👇
+	  },
+	  config = function()
+		require("obsidian").setup({
+		  workspaces = {
+			{
+			  name = "notes",
+			  path = "~/Documents/vaults/notes/",
+			},
+		  },
+		  completion = {
+			-- Set to false to disable completion.
+			nvim_cmp = true,
+		  },
+		  templates = {
+			folder = "templates",
+
+			date_format = "%Y-%m-%d",
+			time_format = "%H:%M",
+			-- A map for custom variables, the key should be the variable and the value a function
+			substitutions = {},
+		  },
+		  -- see below for full list of options 👇
+		})
+	  end,
+	})
+
 	-- Lualine
 	use {
 		'nvim-lualine/lualine.nvim',
