@@ -5,8 +5,10 @@ opt.mouse = 'a'
 
 -- Tabs and indents
 opt.smartindent = true
-opt.shiftwidth = 4
-opt.tabstop = 4
+opt.expandtab = true
+opt.shiftwidth = 2
+opt.tabstop = 2
+opt.autoindent = true
 
 -- Text display
 opt.scrolloff = 8

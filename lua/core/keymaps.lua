@@ -2,6 +2,7 @@ local keymap = vim.keymap.set
 
 vim.g.mapleader = " "
 
+keymap("n", "<Leader>lg", ":LazyGit<Cr>", { silent = true, desc = "Open lazygit" })
 
 -- Faster exiting insert mode
 keymap("i", "jk", "<ESC>", { silent = true, desc = "Exit insert mode" })
@@ -20,12 +21,17 @@ keymap("v", "<C-j>", ":m '>+1<Cr>gv=gv", { silent = true, desc = "Move selection
 keymap("v", ">", ">gv", { silent = true, noremap = true, desc = "Indent" })
 keymap("v", "<", "<gv", { silent = true, noremap = true, desc = "Unindent" })
 
+keymap("n", "<Leader>gb", ":BlameToggle virtual<Cr>", {silent = true, noremap = true, desc = "Toggle git blame"})
+keymap("n", "<Leader>gbw", ":BlameToggle <Cr>", {silent = true, noremap = true, desc = "Toggle git blame (window mode)"})
 -- ********************
 -- Shortcut keybindings
 -- ********************
 
 -- Netrew
 keymap("n", "<A-g>", ":Ex<Cr>", { silent = true, desc = "Open Netrew" })
+
+-- Undotree
+keymap("n", "<Leader>U", ":UndotreeToggle<Cr>", { silent = true, desc = "Toggle Undotree" })
 
 -- Normie save
 keymap("", "<C-s>", ":w<Cr>", { silent = true, desc = "Save file" })

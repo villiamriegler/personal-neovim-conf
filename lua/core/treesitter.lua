@@ -10,3 +10,9 @@ require 'nvim-treesitter.configs'.setup {
 		additional_vim_regex_highlighting = false,
 	},
 }
+
+vim.filetype.add({
+    extension = {
+        templ = "templ",
+    },
+})

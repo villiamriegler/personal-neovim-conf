@@ -98,3 +98,5 @@ cmp.event:on (
 	autopairs_cmp.on_confirm_done()
 )
 
+require 'core.volar'
+
