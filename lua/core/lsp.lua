@@ -3,14 +3,8 @@ require("mason").setup()
 local mason_lsp = require("mason-lspconfig")
 
 -- Sets up all available lsp servers 
-mason_lsp.setup_handlers {
-	function (server_name)
-		-- Include completion capabilities
-		local capabilities = require('cmp_nvim_lsp').default_capabilities()
-		require("lspconfig")[server_name].setup {
-			capabilities = capabilities
-		}
-	end,
+mason_lsp.setup {
+  automatic_enable = true
 }
 
 -- luasnip setup
@@ -97,6 +91,4 @@ cmp.event:on (
 	'confirm_done',
 	autopairs_cmp.on_confirm_done()
 )
-
-require 'core.volar'
 
