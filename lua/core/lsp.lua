@@ -1,3 +1,4 @@
+-- LSP, completion, and snippet setup for Neovim
 -- Mason setup 
 require("mason").setup()
 local mason_lsp = require("mason-lspconfig")

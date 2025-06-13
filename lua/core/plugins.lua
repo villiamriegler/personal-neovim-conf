@@ -53,14 +53,14 @@ return require('packer').startup(function(use)
 
   -- lsp
   use {
-    'neovim/nvim-lspconfig',     -- Collection of configurations for built-in LSP client use 'hrsh7th/nvim-cmp', 				-- Autocompletion plugin
+    'neovim/nvim-lspconfig', -- Collection of configurations for built-in LSP client use 'hrsh7th/nvim-cmp', 				-- Autocompletion plugin
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
-    'hrsh7th/cmp-nvim-lsp',         -- LSP source for nvim-cmp
-    'saadparwaiz1/cmp_luasnip',     -- Snippets source for nvim-cmp
-    'L3MON4D3/LuaSnip',             -- Snippets plugin
+    'hrsh7th/cmp-nvim-lsp',     -- LSP source for nvim-cmp
+    'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+    'L3MON4D3/LuaSnip',         -- Snippets plugin
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim'
   }
@@ -78,13 +78,11 @@ return require('packer').startup(function(use)
 
   use {
     "olimorris/codecompanion.nvim",
-    config = function()
-      require("codecompanion").setup()
-    end,
     requires = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
-    }
+      "j-hui/fidget.nvim"
+    },
   }
 
   -- Which key i ain't ashamed
