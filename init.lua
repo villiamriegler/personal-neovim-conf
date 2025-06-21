@@ -1,3 +1,1 @@
-vim.loader.enable() -- improves startuptime if needed in the future
-require'core'
-
+require("config.lazy")
