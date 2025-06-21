@@ -34,6 +34,12 @@ opt.confirm = true
 
 opt.conceallevel=1
 
+require('catppuccin').setup({
+  flavour = 'frappe'
+})
+
 -- Color Theme
-vim.cmd.colorscheme 'nordic'
+vim.cmd.colorscheme 'catppuccin'
+
+
 

@@ -1,6 +1,6 @@
 require('lualine').setup {
 	options = {
-		theme = 'nordic'
+		theme = 'catppuccin'
 	},
 	sections = {
 		lualine_a = { 'mode' },

@@ -29,6 +29,8 @@ return require('packer').startup(function(use)
   -- use "savq/melange-nvim"
   use 'AlexvZyl/nordic.nvim'
 
+  use { "catppuccin/nvim", as = "catppuccin" }
+
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
