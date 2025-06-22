@@ -210,7 +210,7 @@ return {
 		local have_mason, mlsp = pcall(require, "mason-lspconfig")
 		local all_mslp_servers = {}
 		if have_mason then
-			all_mslp_servers = vim.tbl_keys(require("mason-lspconfig").get_mappings().lspconfig_to_package)
+			all_mslp_servers = vim.tbl_keys(require("mason-lspconfig").get_mappings().mason_to_lspconfig) -- FIXME: This seems to be an unstable interface
 		end
 
 		local ensure_installed = {} ---@type string[]
