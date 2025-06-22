@@ -24,9 +24,13 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		{ "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
-			colorscheme = "catppuccin",
-		} },
+		{
+			"LazyVim/LazyVim",
+			import = "lazyvim.plugins",
+			opts = {
+				colorscheme = "catppuccin",
+			},
+		},
 		-- import your plugins
 		{ import = "plugins" },
 	},
